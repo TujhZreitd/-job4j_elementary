@@ -1,7 +1,6 @@
 package ru.job4j.contidion;
 
 public class SwitchWeek {
-    @SuppressWarnings("checkstyle:WhitespaceAround")
     public static String nameOfDay(int day) {
         String name;
         switch (day) {
@@ -32,5 +31,4 @@ public class SwitchWeek {
         }
         return name;
     }
-
 }
