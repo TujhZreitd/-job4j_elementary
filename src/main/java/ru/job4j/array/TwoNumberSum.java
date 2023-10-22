@@ -11,13 +11,12 @@ public class TwoNumberSum {
                 result[0] = i;
                 result[1] = j;
                 break;
-            }
-            if (j == i + 1) {
+            } else if (j == i + 1) {
                 i++;
                 j = array.length - 1;
-                continue;
+            } else {
+                j--;
             }
-            j--;
         }
         return result;
     }
