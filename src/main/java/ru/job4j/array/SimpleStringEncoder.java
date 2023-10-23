@@ -6,16 +6,8 @@ public class SimpleStringEncoder {
         char symbol = input.charAt(0);
         int counter = 1;
         for (int i = 1; i < input.length(); i++) {
-            if (symbol == input.charAt(i) && i < input.length() - 1) {
+            if (symbol == input.charAt(i)) {
                 counter++;
-            } else if (symbol != input.charAt(i) && i == input.length() - 1) {
-                if (counter > 1) {
-                    result += "" + symbol + counter + input.charAt(i);
-                } else {
-                    result += "" + symbol + input.charAt(i);
-                }
-            } else if (symbol == input.charAt(i) && i == input.length() - 1) {
-                    result += "" + symbol + (counter + 1);
             } else {
                 if (counter > 1) {
                     result += "" + symbol + counter;
@@ -27,6 +19,11 @@ public class SimpleStringEncoder {
                     counter = 1;
                 }
             }
+        }
+        if (counter > 1) {
+            result += "" + input.charAt(input.length() - 1) + counter;
+        } else {
+            result += "" + input.charAt(input.length() - 1);
         }
         return result;
     }
