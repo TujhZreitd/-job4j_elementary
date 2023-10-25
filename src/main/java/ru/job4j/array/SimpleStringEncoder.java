@@ -14,7 +14,7 @@ public class SimpleStringEncoder {
                 counter = 1;
             }
         }
-        result = counter > 1 ? result + "" + input.charAt(input.length() - 1) + counter : result + "" + input.charAt(input.length() - 1);
+        result = counter > 1 ? result + "" + symbol + counter : result + "" + symbol;
         return result;
     }
 }
